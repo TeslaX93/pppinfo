@@ -1,0 +1,22 @@
+{
+    "name": "teslax93/pppinfo",
+    "description": "Get information from Poczta Polska (Polish Post) about your package.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TeslaX93",
+            "email": "bartlomiej.malarz@gmail.com",
+            "homepage": "http://bmalarz.pl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.2"
+    },
+	"autoload": {
+        "psr-0": {
+            "pppinfo": "src/"
+		}
+	}
+}
