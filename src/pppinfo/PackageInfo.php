@@ -66,4 +66,13 @@ class PackageInfo
 		$przesylka = (array) ($wsclient->sprawdzPrzesylke(['numer' => $packageNumber])->return);
 		return $przesylka;
 	}
+	public function getDetailedPackageInfo(string $packageNumber) : array
+	{
+		
+		$header = $this->header;
+		$wsclient = new WSSoapClient("https://tt.poczta-polska.pl/Sledzenie/services/Sledzenie?wsdl",['connection_timeout' => 10800,'cache_wsdl' => WSDL_CACHE_NONE]);
+		$wsclient->__setUserNameToken($header['Username'],$header['Password'],$header['passwordType']);			
+		$przesylka = (array) ($wsclient->sprawdzPrzesylkePl(['numer' => $packageNumber])->return);
+		return $przesylka;
+	}	
 }

@@ -38,6 +38,7 @@ or you can use one of these functions:
 
 ```php
 $pkgInfo->getPackageStatus("NUMBER"); //your package number, you can use testp0 as test value. Should return 0 if everything is ok.
-$pkgInfo->getPackageInfo("NUMBER"); //as above, but should return array with useful package information.
+$pkgInfo->getPackageInfo("NUMBER"); //it should return array with useful package information.
+$pkgInfo->getDetailedPackageInfo("NUMBER"); // as above, but should return even more detailed array (addresses of local post offices, etc) with useful package information.
 $pkgInfo->addChecksum("NUMBER"); //if you provide 8-digit number, it calculates checksum and returns 9-digit number. 
 ```
